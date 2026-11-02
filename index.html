@@ -1,0 +1,269 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="robots" content="noindex, nofollow">
+<title>LTI Organic SEO Dashboard</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@400;600&family=Source+Serif+4:opsz,wght@8..60,400&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#ffffff;--panel:#f5f7fa;--fg:#16213a;--muted:#5a6478;--line:#dde2ea;--c1:#2c6bd6;--c2:#e8862a;--bad:#c93c3c;--soft:#c3cad6;--ref:#16213a;--tip:#ffffff;
+--sans:"Source Sans 3",-apple-system,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;--serif:"Source Serif 4",Georgia,"Times New Roman",serif;color-scheme:light}
+@media (prefers-color-scheme:dark){:root{--bg:#0f1420;--panel:#171e2c;--fg:#e8ecf3;--muted:#9aa4b6;--line:#2a3345;--c1:#6c9df0;--c2:#f2a65a;--bad:#f07272;--soft:#3d4759;--ref:#e8ecf3;--tip:#1e2638;color-scheme:dark}}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--fg);font-family:var(--sans);font-size:15px;line-height:1.5}
+.wrap{max-width:1200px;margin:0 auto;padding-block:28px 48px;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px));display:flex;flex-direction:column;gap:28px}
+h1{font-family:var(--serif);font-weight:400;font-size:30px;line-height:1.2;margin:0;text-wrap:balance}
+h2{font-size:19px;font-weight:600;margin:0 0 6px}
+h3{font-size:15.5px;font-weight:600;margin:0 0 4px}
+.lede{color:var(--muted);margin:6px 0 0;max-width:75ch}
+.note{color:var(--muted);font-size:13px;margin:0 0 12px;max-width:80ch}
+.tabs{display:flex;gap:24px;border-bottom:1px solid var(--line);margin-top:16px;flex-wrap:wrap}
+.tab{background:none;border:0;border-bottom:2px solid transparent;padding:8px 0;margin-bottom:-1px;font:inherit;font-size:15px;color:var(--muted);cursor:pointer}
+.tab[aria-selected="true"]{color:var(--fg);border-bottom-color:var(--fg);font-weight:600}
+.tab:focus-visible{outline:2px solid var(--c1);outline-offset:3px}
+.page{display:flex;flex-direction:column;gap:28px}
+.tiles{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,11rem),1fr));gap:14px}
+.tile,.card{background:var(--panel);border:1px solid var(--line);border-radius:8px;min-width:0}
+.tile{padding:14px 16px;display:flex;flex-direction:column;gap:4px}
+.card{padding:18px 20px}
+.label,.sub{font-size:13px;color:var(--muted)}
+.num{font-family:var(--serif);font-size:30px;line-height:1.15;font-variant-numeric:tabular-nums}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,24rem),1fr));gap:14px}
+.verdict p{margin:0;max-width:75ch;font-size:16px}
+.chart{position:relative;min-width:0}
+.chart svg{display:block;width:100%;height:auto}
+.tick{fill:var(--muted);font-size:12.5px;font-family:var(--sans)}
+.val{fill:var(--fg);font-size:12.5px;font-family:var(--sans);font-variant-numeric:tabular-nums}
+.key{white-space:nowrap;margin-left:8px}
+.sw{display:inline-block;width:10px;height:10px;border-radius:2px;margin-right:4px;vertical-align:baseline}
+.tw{overflow-x:auto}
+table{width:100%;border-collapse:collapse;font-size:13px;font-variant-numeric:tabular-nums}
+th,td{text-align:left;padding:7px 9px;border-bottom:1px solid var(--line);vertical-align:top}
+th{color:var(--muted);font-weight:600}
+.n{text-align:right}
+ol,ul{margin:0;padding-left:1.2rem;display:flex;flex-direction:column;gap:8px}
+.list{list-style:none;padding:0}
+.list li{display:flex;flex-direction:column}
+.list span{color:var(--muted);font-size:13px}
+.tip{position:absolute;pointer-events:none;background:var(--tip);border:1px solid var(--line);border-radius:6px;box-shadow:0 4px 14px rgba(0,0,0,.12);padding:6px 9px;font-size:12.5px;white-space:nowrap;opacity:0}
+.tip .k{color:var(--muted)}
+footer{color:var(--muted);font-size:12.5px;border-top:1px solid var(--line);padding-top:14px}
+[hidden]{display:none!important}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <h1>LTI Organic SEO Dashboard</h1>
+    <p class="lede">londontradingindex.com, starting numbers from 1 to 2 November 2026. Pick the view that suits you.</p>
+    <div class="tabs" role="tablist" aria-label="Dashboard views">
+      <button class="tab" role="tab" id="tab-director" data-tab="director" aria-selected="true">Director</button>
+      <button class="tab" role="tab" id="tab-manager" data-tab="manager" aria-selected="false">Marketing Manager</button>
+      <button class="tab" role="tab" id="tab-specialist" data-tab="specialist" aria-selected="false">SEO Specialist</button>
+    </div>
+  </header>
+
+  <section class="page" id="director" role="tabpanel" aria-labelledby="tab-director">
+    <div class="verdict"><h2>Where We Stand</h2>
+      <p>Google does not bring LTI many customers yet. People do search for what LTI offers, and the website is fast and works well. What is missing is content and visibility. Fixing this needs content work, not new technology.</p></div>
+    <div class="tiles">
+      <div class="tile"><span class="label">Visitors From Google Each Month</span><b class="num" data-tile="headline:metric=Organic traffic:display"></b><span class="sub">Worldwide, Semrush estimate</span></div>
+      <div class="tile"><span class="label">UK Searches for Our Target Keywords</span><b class="num" data-tile="demand:measure=UK searches for target keywords:value"></b><span class="sub">Per month, the demand we can go after</span></div>
+      <div class="tile"><span class="label">Value of Today's UK Google Traffic</span><b class="num" data-tile="headline:metric=UK traffic cost:display"></b><span class="sub">Per month, what the same visits would cost in ads</span></div>
+      <div class="tile"><span class="label">Mentions in AI Search</span><b class="num" data-tile="headline:metric=AI mentions:display"></b><span class="sub">ChatGPT, Gemini and Google AI answers</span></div>
+    </div>
+    <div class="card"><h3>Searches Compared With Visits</h3>
+      <p class="note">UK, per month. A search is not a visit, so this shows the size of the gap, not a forecast.</p>
+      <div class="chart" data-chart="gap"></div></div>
+    <div class="grid">
+      <div class="card"><h3>What We Recommend</h3><ol>
+        <li><b>Fix the basics.</b> Make every version of the site go to one address, and fix two broken article links. This is a small technical job.</li>
+        <li><b>Build pages for what people search.</b> Rewrite the account pages and add MT5 broker and demo account pages.</li>
+        <li><b>Measure real results.</b> Connect Search Console and Google Analytics so we can report real visits and sign-ups.</li></ol></div>
+      <div class="card"><h3>Decisions Needed</h3><ul>
+        <li>Approve time to write the account pages and the new MT5 pages.</li>
+        <li>Give access to Google Search Console and Google Analytics.</li>
+        <li>Agree to review the site's links, as some may be paid links.</li></ul></div>
+    </div>
+  </section>
+
+  <section class="page" id="manager" role="tabpanel" aria-labelledby="tab-manager" hidden>
+    <p class="note">What to work on, in what order, and how we will track it.</p>
+    <div class="tiles">
+      <div class="tile"><span class="label">Visits From Google per Month</span><b class="num" data-tile="headline:metric=Organic traffic:display"></b><span class="sub">Worldwide, estimate</span></div>
+      <div class="tile"><span class="label">Keywords We Rank For</span><b class="num" data-tile="headline:metric=Organic keywords:display"></b><span class="sub">Worldwide, top 100</span></div>
+      <div class="tile"><span class="label">UK Keywords</span><b class="num" data-tile="headline:metric=UK keywords:display"></b><span class="sub">Google UK, top 100</span></div>
+      <div class="tile"><span class="label">Authority Score</span><b class="num" data-tile="headline:metric=Authority Score:display"></b><span class="sub">Out of 100</span></div>
+      <div class="tile"><span class="label">Mobile Speed Score</span><b class="num" data-tile="psi_scores:category=Performance:mobile"></b><span class="sub">Homepage, out of 100</span></div>
+    </div>
+    <div class="card"><h3>90-Day Action Plan</h3><p class="note">In order of priority. Status is updated every month.</p>
+      <div class="tw"><table data-table="actions"><thead><tr><th class="n">Priority</th><th>Action</th><th>Why</th><th>Effort</th><th>Timing</th><th>Status</th></tr></thead><tbody></tbody></table></div></div>
+    <div class="grid">
+      <div class="card"><h3>What Do Traders Search For?</h3><p class="note">Searches per month in the UK for the keywords we will target. Hover a bar for more detail.</p><div class="chart" data-chart="kw"></div></div>
+      <div class="card"><h3>Where Are We Missing on Google?</h3><p class="note">Extra result types shown for our UK keywords that do not include the site. Each bar counts keywords.</p><div class="chart" data-chart="serp"></div></div>
+    </div>
+    <div class="card"><h3>Monthly Numbers Once Connected</h3><ul class="list">
+      <li><b>Clicks, impressions and average position</b><span>Google Search Console</span></li>
+      <li><b>Visits and account sign-ups from Google</b><span>Google Analytics 4</span></li>
+      <li><b>Qualified leads from Google</b><span>CRM</span></li>
+      <li><b>AI mentions</b><span>Monthly question list in ChatGPT, Perplexity and Google AI Overviews</span></li></ul></div>
+  </section>
+
+  <section class="page" id="specialist" role="tabpanel" aria-labelledby="tab-specialist" hidden>
+    <div><h2>Full Baseline</h2><p class="note">Semrush and PageSpeed Insights. Visits are Semrush estimates, not real visits. Link numbers are rounded by Semrush.</p>
+    <div class="tiles">
+      <div class="tile"><span class="label">Visits From Google per Month</span><b class="num" data-tile="headline:metric=Organic traffic:display"></b><span class="sub">Worldwide</span></div>
+      <div class="tile"><span class="label">Keywords We Rank For</span><b class="num" data-tile="headline:metric=Organic keywords:display"></b><span class="sub">Worldwide, top 100</span></div>
+      <div class="tile"><span class="label">Authority Score</span><b class="num" data-tile="headline:metric=Authority Score:display"></b><span class="sub">Out of 100</span></div>
+      <div class="tile"><span class="label">Websites Linking to Us</span><b class="num" data-tile="headline:metric=Referring domains:display"></b><span class="sub">Referring domains</span></div>
+      <div class="tile"><span class="label">Total Links</span><b class="num" data-tile="headline:metric=Backlinks:display"></b><span class="sub">Backlinks</span></div>
+      <div class="tile"><span class="label">AI Search Mentions</span><b class="num" data-tile="headline:metric=AI mentions:display"></b><span class="sub">ChatGPT, Gemini, Google AI</span></div>
+    </div></div>
+    <div class="grid">
+      <div class="card"><h3>Which Searches Bring Visitors?</h3><p class="note">UK keywords by what the searcher wants. Only the comparison searches bring visits.</p><div class="chart" data-chart="intent"></div></div>
+      <div class="card"><h3>What Do Traders Search For?</h3><p class="note">Searches per month in the UK for the target keywords.</p><div class="chart" data-chart="kw"></div></div>
+      <div class="card"><h3>Where Are We Missing on Google?</h3><p class="note">Extra result types for our UK keywords that do not include the site.</p><div class="chart" data-chart="serp"></div></div>
+      <div class="card"><h3>Who Links to Us Most?</h3><p class="note">Websites with the most links to the site. Several are LTI's own or related sites.</p><div class="chart" data-chart="refs"></div></div>
+      <div class="card"><h3>How Does the Homepage Score?</h3><p class="note">Google PageSpeed scores out of 100. <span class="key"><span class="sw" style="background:var(--c1)"></span>Mobile</span><span class="key"><span class="sw" style="background:var(--c2)"></span>Desktop</span></p><div class="chart" data-chart="scores"></div></div>
+      <div class="card"><h3>How Fast Does It Load?</h3><p class="note">Compared with Google's "good" limit (dashed line). Red is over the limit. <span class="key"><span class="sw" style="background:var(--c1)"></span>Mobile</span><span class="key"><span class="sw" style="background:var(--c2)"></span>Desktop</span></p><div class="chart" data-chart="cwv"></div></div>
+    </div>
+    <div class="grid">
+      <div class="card"><h3>Target Keywords and Pages</h3><p class="note">KD is keyword difficulty from 0 to 100. Higher is harder.</p>
+        <div class="tw"><table data-table="target_keywords"><thead><tr><th>Keyword</th><th class="n">Volume</th><th class="n">KD %</th><th class="n">CPC (USD)</th><th>Target Page</th></tr></thead><tbody></tbody></table></div></div>
+      <div class="card"><h3>Top UK Ranking Keywords</h3><p class="note">Position in Google UK and searches per month.</p>
+        <div class="tw"><table data-table="uk_keywords"><thead><tr><th>Keyword</th><th class="n">Position</th><th class="n">Volume</th></tr></thead><tbody></tbody></table></div></div>
+    </div>
+  </section>
+
+  <footer>Sources: Semrush (1 to 2 November 2026), Google PageSpeed Insights (2 November 2026) and an SEO crawler report (2 November 2026). Traffic numbers are estimates. Prepared by Vathsan.</footer>
+</div>
+
+<script>
+const DATA = {"headline":[{"metric":"Organic traffic","scope":"Worldwide","value":52,"display":"52"},{"metric":"Organic keywords","scope":"Worldwide","value":31,"display":"31"},{"metric":"Authority Score","scope":"Worldwide","value":8,"display":"8"},{"metric":"Referring domains","scope":"Worldwide","value":2000,"display":"2K"},{"metric":"Backlinks","scope":"Worldwide","value":5400,"display":"5.4K"},{"metric":"AI mentions","scope":"Worldwide","value":0,"display":"0"},{"metric":"UK keywords","scope":"UK","value":16,"display":"16"},{"metric":"UK organic traffic","scope":"UK","value":42,"display":"42"},{"metric":"UK traffic cost","scope":"UK","value":330,"display":"$330"}],"uk_keywords":[{"keyword":"london trading","position":1,"volume":170},{"keyword":"the london trader","position":27,"volume":140},{"keyword":"landore resources ltd","position":60,"volume":110},{"keyword":"lon t","position":63,"volume":140},{"keyword":"lon: clon","position":64,"volume":880}],"pagespeed":[{"measure":"Performance score","mobile":"92","desktop":"94"},{"measure":"Accessibility score","mobile":"97","desktop":"97"},{"measure":"Best Practices score","mobile":"100","desktop":"100"},{"measure":"SEO score","mobile":"100","desktop":"100"},{"measure":"First Contentful Paint","mobile":"1.1 s","desktop":"0.3 s"},{"measure":"Largest Contentful Paint","mobile":"2.6 s","desktop":"0.9 s"},{"measure":"Total Blocking Time","mobile":"120 ms","desktop":"100 ms"},{"measure":"Cumulative Layout Shift","mobile":"0","desktop":"0.008"},{"measure":"Speed Index","mobile":"5.2 s","desktop":"2.1 s"}],"target_keywords":[{"keyword":"forex broker uk","intent":"Informational","volume":480,"kd":65,"cpc":32.97,"target":"Homepage"},{"keyword":"metatrader 5 brokers","intent":"Informational","volume":390,"kd":45,"cpc":29.06,"target":"/platforms/mt5"},{"keyword":"best forex broker united kingdom","intent":"Commercial","volume":260,"kd":36,"cpc":28.32,"target":"Homepage or /trading/account-types"},{"keyword":"managed forex accounts","intent":"Informational","volume":260,"kd":28,"cpc":13.06,"target":"/trading/managed-accounts"},{"keyword":"mt5 demo account","intent":"Informational","volume":210,"kd":57,"cpc":11.15,"target":"New demo account page"},{"keyword":"mt5 broker","intent":"Commercial","volume":170,"kd":53,"cpc":29.94,"target":"Homepage"},{"keyword":"best mt5 brokers","intent":"Commercial","volume":170,"kd":41,"cpc":32.46,"target":"Homepage or /platforms/mt5"},{"keyword":"mt5 broker uk","intent":"Informational","volume":90,"kd":28,"cpc":28.43,"target":"Homepage"}],"intent":[{"intent":"Informational","keywords":15,"traffic":0},{"intent":"Commercial","keywords":2,"traffic":42},{"intent":"Transactional","keywords":1,"traffic":0}],"serp_gaps":[{"feature":"Related searches","keywords":16},{"feature":"Reviews","keywords":12},{"feature":"People also ask","keywords":12},{"feature":"AI Overview","keywords":11},{"feature":"Video","keywords":10},{"feature":"Knowledge panel","keywords":9},{"feature":"Instant answer","keywords":7},{"feature":"Image","keywords":1},{"feature":"Local pack","keywords":1}],"ref_domains":[{"domain":"londontradingindex.hk","backlinks":125},{"domain":"ltnew.framer.website","backlinks":108},{"domain":"cashbackforex.com","backlinks":72},{"domain":"fxverify.com","backlinks":72},{"domain":"trade2wins.com","backlinks":60}],"psi_scores":[{"category":"Performance","mobile":92,"desktop":94},{"category":"Accessibility","mobile":97,"desktop":97},{"category":"Best Practices","mobile":100,"desktop":100},{"category":"SEO","mobile":100,"desktop":100}],"cwv":[{"metric":"First Contentful Paint","mobile":1.1,"desktop":0.3,"good_max":1.8,"unit":"s"},{"metric":"Largest Contentful Paint","mobile":2.6,"desktop":0.9,"good_max":2.5,"unit":"s"},{"metric":"Total Blocking Time","mobile":120,"desktop":100,"good_max":200,"unit":"ms"},{"metric":"Cumulative Layout Shift","mobile":0,"desktop":0.008,"good_max":0.1,"unit":""},{"metric":"Speed Index","mobile":5.2,"desktop":2.1,"good_max":3.4,"unit":"s"}],"actions":[{"priority":1,"action":"Redirect the http and www versions to one address, and fix the two broken article URLs","why":"Four versions of the site load separately and two article links return errors","effort":"Low","timing":"Days 1 to 30","status":"Not started"},{"priority":2,"action":"Connect Google Search Console and GA4","why":"Needed to report clicks, sessions and leads instead of estimates","effort":"Low","timing":"Days 1 to 30","status":"Waiting for access"},{"priority":3,"action":"Rewrite account page headings and add unique copy and FAQs","why":"Account pages are thin and their headings do not name the product","effort":"Medium","timing":"Days 1 to 60","status":"Not started"},{"priority":4,"action":"Add structured data and named author bylines","why":"No structured data or named authors were found","effort":"Medium","timing":"Days 31 to 60","status":"Not started"},{"priority":5,"action":"Build MT5 broker and demo account pages","why":"The highest-demand UK keywords have no matching page","effort":"Medium","timing":"Days 61 to 90","status":"Not started"},{"priority":6,"action":"Combine overlapping AI articles into one hub","why":"Similar articles compete with each other for the same searches","effort":"Medium","timing":"Days 61 to 90","status":"Not started"},{"priority":7,"action":"Review the backlink profile for paid or low-quality links","why":"Top anchor text looks like commercial link-building wording","effort":"Low","timing":"Days 31 to 60","status":"Not started"}]};
+const fmt = (n) => Number(n).toLocaleString('en-GB');
+DATA.demand = [
+  { measure: 'UK searches for target keywords', value: DATA.target_keywords.reduce((s, r) => s + r.volume, 0) },
+  { measure: 'UK visits from Google', value: (DATA.headline.find((r) => r.metric === 'UK organic traffic') || { value: 0 }).value },
+];
+const NS = 'http://www.w3.org/2000/svg';
+const mk = (tag, attrs, parent) => { const e = document.createElementNS(NS, tag); for (const k in attrs) e.setAttribute(k, attrs[k]); if (parent) parent.appendChild(e); return e; };
+
+document.querySelectorAll('[data-tile]').forEach((el) => {
+  const [src, where, field] = el.dataset.tile.split(':');
+  const [k, v] = where.split('=');
+  const row = DATA[src].find((r) => String(r[k]) === v);
+  const val = row ? row[field] : null;
+  el.textContent = val == null ? '—' : (typeof val === 'number' ? fmt(val) : val);
+});
+
+const TABLES = {
+  actions: [['priority', 1], ['action'], ['why'], ['effort'], ['timing'], ['status']],
+  target_keywords: [['keyword'], ['volume', 1, fmt], ['kd', 1], ['cpc', 1, (v) => v.toFixed(2)], ['target']],
+  uk_keywords: [['keyword'], ['position', 1], ['volume', 1, fmt]],
+};
+document.querySelectorAll('[data-table]').forEach((t) => {
+  const tb = t.querySelector('tbody');
+  DATA[t.dataset.table].forEach((r) => {
+    const tr = document.createElement('tr');
+    TABLES[t.dataset.table].forEach(([key, num, f]) => { const td = document.createElement('td'); td.textContent = f ? f(r[key]) : String(r[key]); if (num) td.className = 'n'; tr.appendChild(td); });
+    tb.appendChild(tr);
+  });
+});
+
+function svgFor(el, W, H, label) { el.replaceChildren(); return mk('svg', { viewBox: `0 0 ${W} ${H}`, role: 'img', 'aria-label': label }, el); }
+function textWidth(svg, s, cls) { const t = mk('text', { class: cls }, svg); t.textContent = s; const w = t.getComputedTextLength(); t.remove(); return w; }
+function fit(svg, s, cls, max) { let out = s; while (textWidth(svg, out, cls) > max && out.length > 4) out = out.slice(0, -2); return out === s ? s : out.replace(/\s+$/, '') + '…'; }
+
+function hbar(el, rows, o) {
+  const W = Math.max(280, el.clientWidth || 500), bh = 20, gap = 8, H = rows.length * (bh + gap);
+  const svg = svgFor(el, W, H, o.aria);
+  const labels = rows.map((r) => fit(svg, o.label(r), 'tick', W * 0.45));
+  const left = Math.max(...labels.map((l) => textWidth(svg, l, 'tick'))) + 10;
+  const valW = Math.max(...rows.map((r) => textWidth(svg, o.text(r), 'val'))) + 10;
+  const max = Math.max(...rows.map(o.value)) || 1;
+  const sx = (v) => (v / max) * Math.max(10, W - left - valW);
+  let tip = null;
+  if (o.tip) { tip = document.createElement('div'); tip.className = 'tip'; el.appendChild(tip); }
+  rows.forEach((r, i) => {
+    const y = i * (bh + gap);
+    const lt = mk('text', { class: 'tick', x: left - 8, y: y + bh / 2, dy: '0.35em', 'text-anchor': 'end' }, svg); lt.textContent = labels[i];
+    const w = o.value(r) > 0 ? Math.max(2, sx(o.value(r))) : 0;
+    const rect = mk('rect', { x: left, y, width: w, height: bh, rx: 3 }, svg); rect.style.fill = o.color ? o.color(r) : 'var(--c1)';
+    const vt = mk('text', { class: 'val', x: left + w + 6, y: y + bh / 2, dy: '0.35em' }, svg); vt.textContent = o.text(r);
+    if (tip) {
+      rect.addEventListener('mousemove', (ev) => {
+        tip.replaceChildren(); o.tip(r).forEach((line, j) => { const d = document.createElement('div'); if (j === 0) d.className = 'k'; d.textContent = line; tip.appendChild(d); });
+        const b = el.getBoundingClientRect(); const x = ev.clientX - b.left, yy = ev.clientY - b.top;
+        tip.style.left = Math.max(0, Math.min(x + 12, el.clientWidth - tip.offsetWidth)) + 'px'; tip.style.top = (yy + 12) + 'px'; tip.style.opacity = 1;
+      });
+      rect.addEventListener('mouseleave', () => { tip.style.opacity = 0; });
+    }
+  });
+}
+
+function scores(el, rows) {
+  const W = Math.max(280, el.clientWidth || 500), bh = 12, inner = 3, gap = 12, rowH = bh * 2 + inner + gap, H = rows.length * rowH;
+  const svg = svgFor(el, W, H, 'PageSpeed scores for mobile and desktop');
+  const left = Math.max(...rows.map((r) => textWidth(svg, r.category, 'tick'))) + 10;
+  const sx = (v) => (v / 100) * Math.max(10, W - left - textWidth(svg, '100', 'val') - 10);
+  rows.forEach((r, i) => {
+    const y0 = i * rowH;
+    const lt = mk('text', { class: 'tick', x: left - 8, y: y0 + bh + inner / 2, dy: '0.35em', 'text-anchor': 'end' }, svg); lt.textContent = r.category;
+    [['mobile', 'var(--c1)'], ['desktop', 'var(--c2)']].forEach(([k, c], j) => {
+      const y = y0 + j * (bh + inner);
+      const rect = mk('rect', { x: left, y, width: sx(r[k]), height: bh, rx: 2 }, svg); rect.style.fill = c;
+      const vt = mk('text', { class: 'val', x: left + sx(r[k]) + 6, y: y + bh / 2, dy: '0.35em' }, svg); vt.textContent = r[k];
+    });
+  });
+}
+
+function cwv(el, rows) {
+  const W = Math.max(280, el.clientWidth || 500), bh = 10, inner = 3, labelH = 18, gap = 14, rowH = labelH + bh * 2 + inner + gap, H = rows.length * rowH;
+  const svg = svgFor(el, W, H, 'Loading times for mobile and desktop compared with Google good limits');
+  const show = (v, u) => (u ? `${v} ${u}` : String(v));
+  const valW = Math.max(...rows.flatMap((r) => [show(r.mobile, r.unit), show(r.desktop, r.unit)].map((s) => textWidth(svg, s, 'val')))) + 12;
+  const track = Math.max(10, W - valW);
+  rows.forEach((r, i) => {
+    const y0 = i * rowH;
+    const lt = mk('text', { class: 'tick', x: 0, y: y0 + 12 }, svg); lt.textContent = `${r.metric} · good is ${show(r.good_max, r.unit)} or less`;
+    const max = Math.max(r.good_max * 2, r.mobile, r.desktop);
+    const sx = (v) => (v / max) * track;
+    [['mobile', 'var(--c1)'], ['desktop', 'var(--c2)']].forEach(([k, c], j) => {
+      const y = y0 + labelH + j * (bh + inner);
+      const w = r[k] > 0 ? Math.max(2, sx(r[k])) : 0;
+      const rect = mk('rect', { x: 0, y, width: w, height: bh, rx: 2 }, svg); rect.style.fill = r[k] > r.good_max ? 'var(--bad)' : c;
+      const vt = mk('text', { class: 'val', x: w + 6, y: y + bh / 2, dy: '0.35em' }, svg); vt.textContent = show(r[k], r.unit);
+    });
+    const line = mk('line', { x1: sx(r.good_max), x2: sx(r.good_max), y1: y0 + labelH - 3, y2: y0 + labelH + bh * 2 + inner + 3, 'stroke-width': 1.5, 'stroke-dasharray': '4 3' }, svg); line.style.stroke = 'var(--ref)';
+  });
+}
+
+const CHARTS = {
+  gap: (el) => hbar(el, DATA.demand, { aria: 'UK searches compared with UK visits', label: (r) => r.measure, value: (r) => r.value, text: (r) => fmt(r.value), color: (r) => (r.measure === 'UK visits from Google' ? 'var(--c2)' : 'var(--c1)') }),
+  kw: (el) => hbar(el, [...DATA.target_keywords].sort((a, b) => b.volume - a.volume), { aria: 'UK searches per month by target keyword', label: (r) => r.keyword, value: (r) => r.volume, text: (r) => fmt(r.volume), tip: (r) => [r.keyword, `${fmt(r.volume)} searches a month`, `Difficulty ${r.kd} of 100 · CPC $${r.cpc.toFixed(2)}`] }),
+  serp: (el) => hbar(el, [...DATA.serp_gaps].sort((a, b) => b.keywords - a.keywords), { aria: 'Google result types the site is missing from', label: (r) => r.feature, value: (r) => r.keywords, text: (r) => fmt(r.keywords) }),
+  refs: (el) => hbar(el, [...DATA.ref_domains].sort((a, b) => b.backlinks - a.backlinks), { aria: 'Websites with the most links to the site', label: (r) => r.domain, value: (r) => r.backlinks, text: (r) => fmt(r.backlinks) }),
+  intent: (el) => hbar(el, DATA.intent, { aria: 'UK keywords and visits by search intent', label: (r) => r.intent, value: (r) => r.keywords, text: (r) => `${r.keywords} keyword${r.keywords === 1 ? "" : "s"} · ${fmt(r.traffic)} visit${r.traffic === 1 ? "" : "s"}`, color: (r) => (r.traffic > 0 ? 'var(--c1)' : 'var(--soft)') }),
+  scores: (el) => scores(el, DATA.psi_scores),
+  cwv: (el) => cwv(el, DATA.cwv),
+};
+function drawVisible() { document.querySelectorAll('.page:not([hidden]) [data-chart]').forEach((el) => CHARTS[el.dataset.chart](el)); }
+
+const TABS = ['director', 'manager', 'specialist'];
+function show(id) {
+  document.querySelectorAll('.page').forEach((s) => { s.hidden = s.id !== id; });
+  document.querySelectorAll('.tab').forEach((b) => b.setAttribute('aria-selected', String(b.dataset.tab === id)));
+  if (location.hash.slice(1) !== id) history.replaceState(null, '', '#' + id);
+  drawVisible();
+}
+document.querySelectorAll('.tab').forEach((b) => b.addEventListener('click', () => show(b.dataset.tab)));
+window.addEventListener('hashchange', () => { const h = location.hash.slice(1); if (TABS.includes(h)) show(h); });
+let rt; window.addEventListener('resize', () => { clearTimeout(rt); rt = setTimeout(drawVisible, 150); });
+const start = location.hash.slice(1);
+show(TABS.includes(start) ? start : 'director');
+</script>
+</body>
+</html>
